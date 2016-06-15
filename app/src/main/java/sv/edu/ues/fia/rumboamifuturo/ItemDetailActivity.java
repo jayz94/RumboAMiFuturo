@@ -19,6 +19,7 @@ import android.view.MenuItem;
 public class ItemDetailActivity extends AppCompatActivity {
 
     @Override
+//cambio 1 solo para probar Git
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_detail);
