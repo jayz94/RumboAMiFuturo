@@ -2,6 +2,7 @@ package sv.edu.ues.fia.rumboamifuturo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import sv.edu.ues.fia.rumboamifuturo.dummy.DummyContent;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -65,6 +67,7 @@ public class ItemListActivity extends AppCompatActivity {
             // activity should be in two-pane mode.
             mTwoPane = true;
         }
+
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
