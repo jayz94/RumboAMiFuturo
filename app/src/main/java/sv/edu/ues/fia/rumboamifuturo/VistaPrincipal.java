@@ -33,7 +33,6 @@ public class VistaPrincipal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(VistaPrincipal.this,ItemListActivity.class);
                 startActivity(intent);
-
             }
         });
     }
