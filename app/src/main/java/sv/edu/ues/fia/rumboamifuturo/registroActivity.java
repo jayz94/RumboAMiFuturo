@@ -67,7 +67,7 @@ public class registroActivity extends Activity {
                 Usuario usu = new Usuario(corr.getText().toString(), nomb.getText().toString(), contra.getText().toString(), true, fecha);
                 try{
                     usuari.insert(usu);
-                    Intent inte =  new Intent(this, IngresarPerfilActivity.class);
+                    Intent inte =  new Intent(this,IngresarPerfilActivity.class);
                     startActivity(inte);//Context contexto = this;
                 }catch(Exception e){
                     Toast.makeText(ctx, "Error, correo ya esta en uso", Toast.LENGTH_LONG).show();
