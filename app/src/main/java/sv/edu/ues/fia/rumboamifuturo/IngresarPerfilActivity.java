@@ -29,7 +29,7 @@ public class IngresarPerfilActivity extends AppCompatActivity {
         corr = (EditText) findViewById(R.id.correo);
         contra = (EditText) findViewById(R.id.contraseña);
         nomb = (EditText) findViewById(R.id.nombre);
-        helper = new DaoMaster.DevOpenHelper(this, "bd01", null);
+        helper = new DaoMaster.DevOpenHelper(this, "bd02", null);
         db = helper.getWritableDatabase();
         daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
@@ -58,8 +58,8 @@ public class IngresarPerfilActivity extends AppCompatActivity {
 
             }
     }
-    public void irRegistro(){
-        Intent intent = new Intent(this, IngresarPerfilActivity.class);
+    public void irRegistro(View v){
+        Intent intent = new Intent(this,registroActivity.class);
         startActivity(intent);
     }
 }

@@ -11,6 +11,8 @@ public class Usuario {
     private String nombre;
     private String password;
     private Boolean activo;
+    private String urlFoto;
+    private String resultTest;
     private java.util.Date fechaCreacion;
 
     public Usuario() {
@@ -20,11 +22,13 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public Usuario(String correo, String nombre, String password, Boolean activo, java.util.Date fechaCreacion) {
+    public Usuario(String correo, String nombre, String password, Boolean activo, String urlFoto, String resultTest, java.util.Date fechaCreacion) {
         this.correo = correo;
         this.nombre = nombre;
         this.password = password;
         this.activo = activo;
+        this.urlFoto = urlFoto;
+        this.resultTest = resultTest;
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -60,6 +64,22 @@ public class Usuario {
 
     public void setActivo(Boolean activo) {
         this.activo = activo;
+    }
+
+    public String getUrlFoto() {
+        return urlFoto;
+    }
+
+    public void setUrlFoto(String urlFoto) {
+        this.urlFoto = urlFoto;
+    }
+
+    public String getResultTest() {
+        return resultTest;
+    }
+
+    public void setResultTest(String resultTest) {
+        this.resultTest = resultTest;
     }
 
     public java.util.Date getFechaCreacion() {
