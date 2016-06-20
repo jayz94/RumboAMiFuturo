@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sv.edu.ues.fia.rumboamifuturo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,9 +20,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="sv.edu.ues.fia.rumboamifuturo.ItemListActivity" />
         </activity>
-        <activity android:name=".registroActivity">
-
-        </activity>
+        <activity android:name=".registroActivity" />
         <activity android:name=".IngresarPerfilActivity" />
         <activity android:name=".PefilActivity" />
         <!--
@@ -31,6 +31,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+
         <activity android:name=".VistaPrincipal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".YoutubePlayerActivity" />
+        <activity android:name=".Youtube.UesActivity" />
+        <activity android:name=".Youtube.UcaActivity" />
+        <activity android:name=".Youtube.UPedagogicaActivity"></activity>
     </application>
 
 </manifest>

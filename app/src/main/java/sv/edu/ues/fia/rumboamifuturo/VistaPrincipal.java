@@ -49,8 +49,11 @@ public class VistaPrincipal extends AppCompatActivity {
                         Media.start();
                         imageButtonAudio.setImageResource(R.drawable.ic_action_name5);
 
-
                     }
+                case R.id.imageButton4:
+                    Intent intent4=new Intent(VistaPrincipal.this,YoutubePlayerActivity.class);
+                    startActivity(intent4);
+                    break;
 
 
             }
@@ -58,5 +61,6 @@ public class VistaPrincipal extends AppCompatActivity {
 
         }
     };
+
 
 }
