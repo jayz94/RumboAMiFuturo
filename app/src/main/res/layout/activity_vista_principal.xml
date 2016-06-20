@@ -88,6 +88,18 @@
 
             android:layout_centerHorizontal="true"
             />
+            android:layout_toEndOf="@+id/imageButton2"
+            android:layout_marginStart="37dp" />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageButton4"
+            android:background="@drawable/ovalo"
+            android:elevation="15dp"
+            android:src="@android:drawable/ic_dialog_map"
+            android:layout_below="@+id/linearLayout"
+            android:layout_toStartOf="@+id/imageButton"
+            android:layout_marginEnd="41dp" />
 
     </RelativeLayout>
 

@@ -12,6 +12,82 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOLAAA:D Bienvenido a tu perfil"/>
+        android:text="ESTE ES TU PERFIL"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:id="@+id/textView2"
+        android:layout_alignEnd="@+id/btnfoto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/btnfoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ovalojc"
+        android:layout_gravity="center_vertical"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_alignBottom="@+id/image"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_weight="3"
+        android:adjustViewBounds="true"
+        android:src="@drawable/avatar"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nombre"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/image" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Regresar"
+        android:background="@drawable/ovalojc"
+        android:id="@+id/btnguarda"
+        android:onClick="regresar"
+        android:src="@android:drawable/ic_delete"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/nombre" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elige para obtener informacion:"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:id="@+id/textView4"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado de Test:"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/spinner" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sin resultados"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:id="@+id/test"
+        android:layout_below="@+id/textView5" />
 
 </RelativeLayout>

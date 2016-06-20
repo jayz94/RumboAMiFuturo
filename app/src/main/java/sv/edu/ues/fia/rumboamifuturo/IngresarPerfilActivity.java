@@ -1,5 +1,6 @@
 package sv.edu.ues.fia.rumboamifuturo;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class IngresarPerfilActivity extends AppCompatActivity {
         corr = (EditText) findViewById(R.id.correo);
         contra = (EditText) findViewById(R.id.contraseña);
         nomb = (EditText) findViewById(R.id.nombre);
-        helper = new DaoMaster.DevOpenHelper(this, "bd01", null);
+        helper = new DaoMaster.DevOpenHelper(this, "bd02", null);
         db = helper.getWritableDatabase();
         daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
@@ -45,8 +46,9 @@ public class IngresarPerfilActivity extends AppCompatActivity {
                 String contraseñaIn=contra.getText().toString();
                 String contraseñaOri=usu.getPassword();
                 if(contraseñaOri.equals(contraseñaIn)){
-                    setContentView(R.layout.activity_pefil);/*me equivoque y puse pefil XD*/
-
+                    Intent intent = new Intent(this, PefilActivity.class);/*me equivoque y puse pefil XD*/
+                    intent.putExtra("correo",corr.getText().toString());//envio parametro correo
+                    startActivity(intent);
                 }else
                     Toast.makeText(this, "Error,contraseña incorrecta", Toast.LENGTH_LONG).show();
 
@@ -55,5 +57,9 @@ public class IngresarPerfilActivity extends AppCompatActivity {
             }
 
             }
+    }
+    public void irRegistro(View v){
+        Intent intent = new Intent(this,registroActivity.class);
+        startActivity(intent);
     }
 }

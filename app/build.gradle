@@ -27,6 +27,10 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile 'de.greenrobot:greendao:2.1.0'
+   // compile 'com.google.anreo q eliasdroid.gms:play-services-appindexing:8.1.0'esto de quien es?? no se pero mira
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.0'
+
     compile files('libs/YouTubeAndroidPlayerApi.jar')
 }

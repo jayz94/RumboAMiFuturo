@@ -27,7 +27,9 @@ public class UsuarioDao extends AbstractDao<Usuario, String> {
         public final static Property Nombre = new Property(1, String.class, "nombre", false, "NOMBRE");
         public final static Property Password = new Property(2, String.class, "password", false, "PASSWORD");
         public final static Property Activo = new Property(3, Boolean.class, "activo", false, "ACTIVO");
-        public final static Property FechaCreacion = new Property(4, java.util.Date.class, "fechaCreacion", false, "FECHA_CREACION");
+        public final static Property UrlFoto = new Property(4, String.class, "urlFoto", false, "URL_FOTO");
+        public final static Property ResultTest = new Property(5, String.class, "resultTest", false, "RESULT_TEST");
+        public final static Property FechaCreacion = new Property(6, java.util.Date.class, "fechaCreacion", false, "FECHA_CREACION");
     };
 
 
@@ -47,7 +49,9 @@ public class UsuarioDao extends AbstractDao<Usuario, String> {
                 "\"NOMBRE\" TEXT NOT NULL ," + // 1: nombre
                 "\"PASSWORD\" TEXT," + // 2: password
                 "\"ACTIVO\" INTEGER," + // 3: activo
-                "\"FECHA_CREACION\" INTEGER);"); // 4: fechaCreacion
+                "\"URL_FOTO\" TEXT," + // 4: urlFoto
+                "\"RESULT_TEST\" TEXT," + // 5: resultTest
+                "\"FECHA_CREACION\" INTEGER);"); // 6: fechaCreacion
     }
 
     /** Drops the underlying database table. */
@@ -77,9 +81,19 @@ public class UsuarioDao extends AbstractDao<Usuario, String> {
             stmt.bindLong(4, activo ? 1L: 0L);
         }
  
+        String urlFoto = entity.getUrlFoto();
+        if (urlFoto != null) {
+            stmt.bindString(5, urlFoto);
+        }
+ 
+        String resultTest = entity.getResultTest();
+        if (resultTest != null) {
+            stmt.bindString(6, resultTest);
+        }
+ 
         java.util.Date fechaCreacion = entity.getFechaCreacion();
         if (fechaCreacion != null) {
-            stmt.bindLong(5, fechaCreacion.getTime());
+            stmt.bindLong(7, fechaCreacion.getTime());
         }
     }
 
@@ -97,7 +111,9 @@ public class UsuarioDao extends AbstractDao<Usuario, String> {
             cursor.getString(offset + 1), // nombre
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // password
             cursor.isNull(offset + 3) ? null : cursor.getShort(offset + 3) != 0, // activo
-            cursor.isNull(offset + 4) ? null : new java.util.Date(cursor.getLong(offset + 4)) // fechaCreacion
+            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // urlFoto
+            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // resultTest
+            cursor.isNull(offset + 6) ? null : new java.util.Date(cursor.getLong(offset + 6)) // fechaCreacion
         );
         return entity;
     }
@@ -109,7 +125,9 @@ public class UsuarioDao extends AbstractDao<Usuario, String> {
         entity.setNombre(cursor.getString(offset + 1));
         entity.setPassword(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setActivo(cursor.isNull(offset + 3) ? null : cursor.getShort(offset + 3) != 0);
-        entity.setFechaCreacion(cursor.isNull(offset + 4) ? null : new java.util.Date(cursor.getLong(offset + 4)));
+        entity.setUrlFoto(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
+        entity.setResultTest(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
+        entity.setFechaCreacion(cursor.isNull(offset + 6) ? null : new java.util.Date(cursor.getLong(offset + 6)));
      }
     
     /** @inheritdoc */
