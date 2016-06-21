@@ -15,68 +15,80 @@ public class VistaPrincipal extends AppCompatActivity {
     ImageButton imageButtonListaU;
     ImageButton imageButtonAudio;
     ImageButton imageButtonMapa;
+    ImageButton imagPrueba; //prueba
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_principal);
 
-        Media=MediaPlayer.create(getApplicationContext(),R.raw.audio_pag_principal);
-        imageButtonAudio=(ImageButton)findViewById(R.id.imageButton3);
-        imageButtonRegistro=(ImageButton)findViewById(R.id.imageButton);
-        imageButtonListaU=(ImageButton)findViewById(R.id.imageButton2);
-        imageButtonMapa=(ImageButton)findViewById(R.id.imageButton4);
+        Media = MediaPlayer.create(getApplicationContext(), R.raw.audio_pag_principal);
+        imageButtonAudio = (ImageButton) findViewById(R.id.imageButton3);
+        imageButtonRegistro = (ImageButton) findViewById(R.id.imageButton);
+        imageButtonListaU = (ImageButton) findViewById(R.id.imageButton2);
+        imagPrueba = (ImageButton) findViewById(R.id.imageButton4); // solo para prubea
+        // imageButtonMapa=(ImageButton)findViewById(R.id.imageButton4);
         imageButtonAudio.setOnClickListener(onclick);
         imageButtonRegistro.setOnClickListener(onclick);
         imageButtonListaU.setOnClickListener(onclick);
         imageButtonMapa.setOnClickListener(onclick);
 
     }
+
     View.OnClickListener onclick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.imageButton:{
-                    Intent intent1=new Intent(VistaPrincipal.this,IngresarPerfilActivity.class);
+            switch (v.getId()) {
+                case R.id.imageButton: {
+                    Intent intent1 = new Intent(VistaPrincipal.this, IngresarPerfilActivity.class);
                     startActivity(intent1);
                     break;
                 }
 
-                case  R.id.imageButton2:{
-                    Intent intent2=new Intent(VistaPrincipal.this,ListaUniversidadesActivity.class);
+                case R.id.imageButton2: {
+                    Intent intent2 = new Intent(VistaPrincipal.this, ListaUniversidadesActivity.class);
                     startActivity(intent2);
                     break;
                 }
-                case  R.id.imageButton4:{
-                    Intent intent2=new Intent(VistaPrincipal.this,Mapa.class);
-                    startActivity(intent2);
-                    break;
-                }
-
-
-                case R.id.imageButton3:
-                {
-                    if(Media.isPlaying()){
+                case R.id.imageButton3: {
+                    if (Media.isPlaying()) {
                         Media.pause();
                         imageButtonAudio.setImageResource(R.drawable.ic_action_name4);
-                       }else{
+                    } else {
                         Media.start();
                         imageButtonAudio.setImageResource(R.drawable.ic_action_name5);
                     }
                     break;
                 }
+                case R.id.imageButton4: {
+                    Intent intent2 = new Intent(VistaPrincipal.this, Mapa.class);
+                    startActivity(intent2);
+                    break;
+                }
 
-                    }
-                case R.id.imageButton4:
-                    Intent intent4=new Intent(VistaPrincipal.this,YoutubePlayerActivity.class);
-                    startActivity(intent4);
+
+                case R.id.imageButton7: {
+                    Intent intent5 = new Intent(VistaPrincipal.this, YoutubePlayerActivity.class);
+                    startActivity(intent5);
                     break;
 
 
+                }
+                case R.id.imageButton5:
+                    Intent intent2 = new Intent(VistaPrincipal.this, GaleriaUcaActivity.class);
+                    startActivity(intent2);
+                    break;
+               /* case R.id.imageButton7:
+                    Intent intent1 = new Intent(VistaPrincipal.this, registroActivity.class);
+                    startActivity(intent1);
+                    break;*/
+
+
             }
-
-
         }
-    };
 
+
+
+    };
 }

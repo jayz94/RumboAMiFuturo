@@ -24,7 +24,8 @@
             android:textSize="30dp"
             android:textStyle="normal|bold|italic"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/imageButton2" />
+            android:layout_toEndOf="@+id/imageButton2"
+            android:layout_marginStart="37dp" />
 
         <RelativeLayout
             android:orientation="vertical"
@@ -81,16 +82,6 @@
             android:layout_above="@+id/textView3"
             android:layout_centerHorizontal="true" />
         <ImageButton
-            android:layout_width="70dp"
-            android:layout_height="45dp"
-            android:id="@+id/imageButton4"
-            android:focusable="false"
-
-            android:layout_centerHorizontal="true"
-            />
-            android:layout_toEndOf="@+id/imageButton2"
-            android:layout_marginStart="37dp" />
-        <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/imageButton4"
@@ -100,6 +91,25 @@
             android:layout_below="@+id/linearLayout"
             android:layout_toStartOf="@+id/imageButton"
             android:layout_marginEnd="41dp" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:id="@+id/imageButton5"
+            android:focusable="false"
+            android:text="Ver video"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageButton7"
+            android:background="@drawable/ovalo"
+            android:src="@drawable/ic_action_name5"
+            android:elevation="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 

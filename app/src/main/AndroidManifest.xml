@@ -23,8 +23,6 @@
     <uses-permission android:name="com.arshad.map.permission.MAPS_RECEIVE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -75,7 +73,42 @@
         <activity android:name=".YoutubePlayerActivity" />
         <activity android:name=".Youtube.UesActivity" />
         <activity android:name=".Youtube.UcaActivity" />
-        <activity android:name=".Youtube.UPedagogicaActivity"></activity>
+        <activity android:name=".Youtube.UPedagogicaActivity" />
+        <activity android:name=".TextToSpeechActivity" />
+        <activity android:name=".GaleriaActivity" />
+        <activity
+            android:name=".DetalleActivity"
+            android:label="@string/title_activity_detalle"
+            android:parentActivityName=".GaleriaActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sv.edu.ues.fia.rumboamifuturo.GaleriaActivity" />
+        </activity>
+        <activity
+            android:name=".DetalleUtecActivity"
+            android:label="@string/title_activity_detalle_utec"
+            android:parentActivityName=".GaleriaActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sv.edu.ues.fia.rumboamifuturo.GaleriaActivity" />
+        </activity>
+        <activity android:name=".GaleriaUtecActivity" />
+        <activity android:name=".GaleriaUcaActivity" />
+        <activity
+            android:name=".DetalleUcaActivity"
+            android:label="@string/title_activity_detalle_uca"
+            android:parentActivityName=".GaleriaUcaActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sv.edu.ues.fia.rumboamifuturo.GaleriaUcaActivity" />
+        </activity>
+        <activity android:name=".AdaptadorImagenes" />
+        <activity android:name=".AdaptadorImagenesUca" />
+        <activity android:name=".AdaptadorImagenesUtec" />
+        <activity android:name=".Galeria" />
     </application>
 
 </manifest>

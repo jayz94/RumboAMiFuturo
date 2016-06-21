@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtText2Speech"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="46dp"
+        android:hint="@string/digitar_texto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#06ca1a"
+        android:textColorHint="#0a84e1" >
+        <requestFocus />
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toda la información que necesitas para escoger tu carrera  en un solo lugar."
+        android:id="@+id/textView3"
+        android:textColor="#f11010"
+        android:textSize="20dp"
+        android:elegantTextHeight="true"
+        android:editable="false"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/btnText2SpeechPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_tts1"
+            android:layout_weight="0.34
+        " />
+        <Button
+            android:id="@+id/btnText2SpeechSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_tts2"
+            android:layout_weight="0.34" />
+
+    </LinearLayout>
+</LinearLayout>

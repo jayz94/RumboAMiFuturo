@@ -8,4 +8,32 @@
     <string name="player_error">Error initializing YouTube player</string>
     <string name="seek_to">Jump To</string>
     <string name="seek_to_hint">Seconds</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_audio">AudioActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_camara">CamaraActivity</string>
+    <string name="title_activity_speech">SpeechActivity</string>
+    <string name="title_activity_text_to_speech">TextSpeechActivity</string>
+    <string name="title_activity_gps">GPSActivity</string>
+    <string name="digitar_texto">Ingresar Texto</string>
+    <string name="btnplay">Play </string>
+    <string name="btnstop">stop </string>
+    <string name="mensajevideo">Haga Click arriba de este mensaje</string>
+    <string name="imagen1">imagen</string>
+    <string name="boton1">tomar foto</string>
+    <string name="txtAltitud">Altitud </string>
+    <string name="txtLatitud">Latitud </string>
+    <string name="txtLongitud">Longitud </string>
+    <string name="txtDireccion">Direccion </string>
+    <string name="btnObtenerDatos">Obtener Datos Posicion </string>
+    <string name="edt_tts">Diga algo</string>
+    <string name="btn_tts1">Escuchar</string>
+    <string name="btn_tts2">Guardar</string>
+    <string name="btnTalk">Hable</string>
+    <string name="titulo_actividad_detalle">Actividad De Detalle</string>
+    <string name="nombre_transicion_imagen">imagen_compartida</string>
+    <string name="title_activity_detalle">DetalleActivity</string>
+    <string name="title_activity_detalle_utec">DetalleUtecActivity</string>
+    <string name="title_activity_detalle_uca">DetalleUcaActivity</string>
+
 </resources>
